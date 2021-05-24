@@ -1,0 +1,36 @@
+﻿<Window x:Class="Prototipos_IvanaCorrea.EliminarDelegacion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prototipos_IvanaCorrea"
+        mc:Ignorable="d"
+        Title="EliminarDelegacion" Height="499.485" Width="1270.103">
+    <Grid>
+        <Rectangle Fill="#FF515151" HorizontalAlignment="Left" Height="56" Stroke="White" VerticalAlignment="Top" Width="1262"/>
+        <Rectangle Fill="#FF8B8B8B" HorizontalAlignment="Left" Height="470" Stroke="White" VerticalAlignment="Top" Width="49"/>
+        <Label Content="Eliminar delegación municipal" HorizontalAlignment="Left" Margin="362,0,0,0" VerticalAlignment="Top" FontSize="30" Foreground="White"/>
+        <Button x:Name="Btn_Cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="66,10,0,0" VerticalAlignment="Top" Width="100" FontSize="20" Height="39" Background="#FFC71313" RenderTransformOrigin="-1.292,-3.123" Foreground="White" Click="Btn_Cancelar_Click"/>
+        <Image Source="Images/SSPEV.png" HorizontalAlignment="Left" Height="91" Margin="1079,61,0,0" VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.732,0.547"/>
+        <Label Content="Seleccione la delegación que desea eliminar:" HorizontalAlignment="Left" Height="57" Margin="66,81,0,0" VerticalAlignment="Top" Width="655" FontSize="30"/>
+        <Rectangle Fill="#FF8B8B8B" HorizontalAlignment="Left" Height="45" Margin="66,143,-126,0" Stroke="White" VerticalAlignment="Top" Width="1184"/>
+        <DataGrid HorizontalAlignment="Left" Height="198" Margin="66,188,0,0" VerticalAlignment="Top" Width="148"/>
+        <DataGrid HorizontalAlignment="Left" Height="198" Margin="214,188,0,0" VerticalAlignment="Top" Width="148"/>
+        <DataGrid HorizontalAlignment="Left" Height="198" Margin="362,188,0,0" VerticalAlignment="Top" Width="148"/>
+        <DataGrid HorizontalAlignment="Left" Height="198" Margin="510,188,0,0" VerticalAlignment="Top" Width="148"/>
+        <DataGrid HorizontalAlignment="Left" Height="198" Margin="658,188,-14,0" VerticalAlignment="Top" Width="148"/>
+        <DataGrid HorizontalAlignment="Left" Height="198" Margin="806,188,-162,0" VerticalAlignment="Top" Width="148"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="104,146,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Calle" HorizontalAlignment="Left" Margin="254,146,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Número" HorizontalAlignment="Left" Margin="393,146,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.617,0.549"/>
+        <Label Content="Colonia" HorizontalAlignment="Left" Margin="535,146,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="1.533,0.465"/>
+        <Label Content="C.P." HorizontalAlignment="Left" Margin="699,146,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="2.708,0.59"/>
+        <Label Content="Teléfono" HorizontalAlignment="Left" Margin="826,146,-143,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Height="34" Margin="599,409,0,0" VerticalAlignment="Top" Width="110" FontSize="20" Foreground="White" Background="#FF008725"/>
+        <DataGrid HorizontalAlignment="Left" Height="198" Margin="954,188,0,0" VerticalAlignment="Top" Width="148"/>
+        <DataGrid HorizontalAlignment="Left" Height="198" Margin="1102,188,-126,0" VerticalAlignment="Top" Width="148"/>
+        <Label Content="Correo" HorizontalAlignment="Left" Margin="990,146,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Municipio" HorizontalAlignment="Left" Margin="1124,146,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="3.116,0.423"/>
+
+    </Grid>
+</Window>
