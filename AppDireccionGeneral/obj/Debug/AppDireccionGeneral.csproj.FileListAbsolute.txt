@@ -2,7 +2,6 @@ C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGener
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\Chat.g.cs
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\DetallesReporte.g.cs
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\DictaminarReporte.g.cs
-C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\ListaReportes.g.cs
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\MainWindow.g.cs
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\App.g.cs
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\AppDireccionGeneral_MarkupCompile.cache
@@ -18,7 +17,6 @@ C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGener
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\Chat.baml
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\DetallesReporte.baml
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\DictaminarReporte.baml
-C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\ListaReportes.baml
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\MainWindow.baml
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\ConsultarDelegacion.baml
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\MenuDelegacionMunicipal.baml
@@ -43,3 +41,5 @@ C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGener
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\MenuUsuarios.baml
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\ModificarUsuario.baml
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\RegistrarUsuario.baml
+C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\vista\ListaReportes.g.cs
+C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\vista\ListaReportes.baml
