@@ -26,8 +26,8 @@ namespace AppDireccionGeneral
         }
         private void Btn_Usuario_Click(object sender, RoutedEventArgs e)
         {
-            MenuUsuarios menuUsuarios = new MenuUsuarios();
-            menuUsuarios.Show();
+            CrudUsuario crudUsuario = new CrudUsuario();
+            crudUsuario.Show();
             this.Close();
         }
 
@@ -40,8 +40,6 @@ namespace AppDireccionGeneral
 
         private void Btn_Chat_Click(object sender, RoutedEventArgs e)
         {
-            Chat chat = new Chat();
-            chat.Show();
             this.Close();
 
         }

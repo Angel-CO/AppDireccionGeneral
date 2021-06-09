@@ -49,7 +49,6 @@ namespace AppDireccionGeneral.vista
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             this.btnVerDetalles.IsEnabled = true;
-            
             if (this.lvReportes.SelectedItem != null && ((Reporte)this.lvReportes.SelectedItem).Estatus.Equals("Pendiente"))
             {
                 this.btnDictaminar.IsEnabled = true;
@@ -131,6 +130,13 @@ namespace AppDireccionGeneral.vista
             {
                 MessageBox.Show("No se encontrarón coincidencias con la busqueda");
             }
+        }
+
+        private void btnDictaminar_Click(object sender, RoutedEventArgs e)
+        {
+            DictaminarReporte dictaminarReporte = new DictaminarReporte((Reporte)lvReportes.SelectedItem);
+            dictaminarReporte.Show();
+            this.Close();
         }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\App.xaml
-16-88653718
+121465480379
 
-25-731900525
+25-1937156360
 13-1505183044
-Chat.xaml;ConsultarDelegacion.xaml;ConsultarUsuario.xaml;DetallesReporte.xaml;DictaminarReporte.xaml;EliminarDelegacion.xaml;EliminarUsuario.xaml;MainWindow.xaml;MenuDelegacionMunicipal.xaml;MenuPrincipal.xaml;MenuUsuarios.xaml;ModificarDelegacion.xaml;ModificarUsuario.xaml;RegistrarDelegacion.xaml;RegistrarUsuario.xaml;vista\ListaReportes.xaml;
+ConsultarDelegacion.xaml;DetallesReporte.xaml;EliminarDelegacion.xaml;MainWindow.xaml;MenuDelegacionMunicipal.xaml;MenuPrincipal.xaml;ModificarDelegacion.xaml;RegistrarDelegacion.xaml;vista\CrudUsuario.xaml;vista\DictaminarReporte.xaml;vista\FormularioUsuario.xaml;vista\ListaReportes.xaml;
 
 False
 

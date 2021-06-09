@@ -72,34 +72,6 @@
                     Height="20" Click="btnMostrarTodo_Click"/>
         </StackPanel>
         
-        <!--
-        <StackPanel
-                    Grid.Row="1"
-                    Orientation="Horizontal"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center">
-            <Label Content="Filtrar por:"
-                   FontFamily="Bell MT" FontSize="18"
-                   Margin="0,0,10,0"/>
-            <ComboBox x:Name="cb_filtro"
-                    Width="120"
-                    Margin="0,0,10,0">
-                <ComboBoxItem Content="Folio"/>
-                <ComboBoxItem Content="Fecha"/>
-                <ComboBoxItem Content="Estatus"/>
-                <ComboBoxItem Content="Delegación"/>
-            </ComboBox>
-            <TextBox x:Name="tb_buscar" 
-                     Height="30"
-                     TextWrapping="Wrap"
-                     Width="150"
-                     Background="#C4C4C4"
-                     Margin="0,0,10,0"/>
-            <Button x:Name="btnBuscar"
-                    Content="Buscar"
-                    Width="75"/>
-        </StackPanel>
-        -->
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="135*"/>
@@ -136,7 +108,7 @@
                     Background="Gray"
                     Foreground="White"
                     Height="30"
-                    Width="80"/>
+                    Width="80" Click="btnDictaminar_Click"/>
         </StackPanel>
     </Grid>
 
