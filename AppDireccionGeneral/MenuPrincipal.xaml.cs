@@ -33,8 +33,8 @@ namespace AppDireccionGeneral
 
         private void Btn_DelegacionMunicipal_Click(object sender, RoutedEventArgs e)
         {
-            MenuDelegacionMunicipal menuDelegacionMunicipal = new MenuDelegacionMunicipal();
-            menuDelegacionMunicipal.Show();
+            CrudDelegacion crudDelegacion = new CrudDelegacion();
+            crudDelegacion.Show();
             this.Close();
         }
 

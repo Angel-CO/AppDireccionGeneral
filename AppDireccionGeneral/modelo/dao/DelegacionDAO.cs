@@ -64,5 +64,44 @@ namespace AppDireccionGeneral.modelo.dao
             }
             return delegaciones;
         }
+
+        public static void registrarDelegacion(Delegacion delegacion)
+        {
+            SqlConnection conn = null;
+            try
+            {
+                conn = ConexionBD.getConecction();
+                if (conn != null)
+                {
+                    SqlCommand command;
+                    SqlDataReader dataReader;
+                    String query = String.Format("INSERT INTO SistemaVehicular.dbo.Delegacion " +
+                        "(nombre, calle, numero, colonia, codigoPostal, telefono, correo, tipoDelegacion, idMunicipio) " +
+                        "VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', {8});",
+                        delegacion.Nombre, delegacion.Calle, delegacion.Numero, delegacion.Colonia,
+                        delegacion.CodigoPostal, delegacion.Telefono, delegacion.Correo, delegacion.TipoDelegacion, delegacion.IdMunicipio);
+                    
+                    command = new SqlCommand(query, conn);
+                    dataReader = command.ExecuteReader();
+                    dataReader.Close();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("\nExcepción DelegacionDAO registrarDelegacion(Delegacion delegacion):");
+                Console.WriteLine(e.Message);
+                Console.WriteLine("----------------------------------------------------------------\n");
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+
     }
 }

@@ -60,15 +60,17 @@
     </Compile>
     <Compile Include="modelo\dao\DelegacionDAO.cs" />
     <Compile Include="modelo\dao\DictamenDAO.cs" />
+    <Compile Include="modelo\dao\MunicipioDAO.cs" />
     <Compile Include="modelo\dao\ReporteDAO.cs" />
     <Compile Include="modelo\dao\UsuarioDAO.cs" />
     <Compile Include="modelo\db\ConexionBD.cs" />
     <Compile Include="modelo\poco\Delegacion.cs" />
     <Compile Include="modelo\poco\Dictamen.cs" />
+    <Compile Include="modelo\poco\Municipio.cs" />
     <Compile Include="modelo\poco\Reporte.cs" />
     <Compile Include="modelo\poco\Usuario.cs" />
-    <Compile Include="RegistrarDelegacion.xaml.cs">
-      <DependentUpon>RegistrarDelegacion.xaml</DependentUpon>
+    <Compile Include="vista\CrudDelegacion.xaml.cs">
+      <DependentUpon>CrudDelegacion.xaml</DependentUpon>
     </Compile>
     <Compile Include="vista\CrudUsuario.xaml.cs">
       <DependentUpon>CrudUsuario.xaml</DependentUpon>
@@ -76,21 +78,16 @@
     <Compile Include="vista\DictaminarReporte.xaml.cs">
       <DependentUpon>DictaminarReporte.xaml</DependentUpon>
     </Compile>
+    <Compile Include="vista\FormularioDelegacion.xaml.cs">
+      <DependentUpon>FormularioDelegacion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="vista\FormularioUsuario.xaml.cs">
       <DependentUpon>FormularioUsuario.xaml</DependentUpon>
     </Compile>
     <Compile Include="vista\ListaReportes.xaml.cs">
       <DependentUpon>ListaReportes.xaml</DependentUpon>
     </Compile>
-    <Page Include="ConsultarDelegacion.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="DetallesReporte.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="EliminarDelegacion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,32 +99,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ConsultarDelegacion.xaml.cs">
-      <DependentUpon>ConsultarDelegacion.xaml</DependentUpon>
-    </Compile>
     <Compile Include="DetallesReporte.xaml.cs">
       <DependentUpon>DetallesReporte.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarDelegacion.xaml.cs">
-      <DependentUpon>EliminarDelegacion.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MenuDelegacionMunicipal.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MenuPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ModificarDelegacion.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="RegistrarDelegacion.xaml">
+    <Page Include="vista\CrudDelegacion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,6 +119,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="vista\DictaminarReporte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\FormularioDelegacion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -149,12 +136,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuDelegacionMunicipal.xaml.cs">
-      <DependentUpon>MenuDelegacionMunicipal.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarDelegacion.xaml.cs">
-      <DependentUpon>ModificarDelegacion.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
