@@ -37,6 +37,7 @@ namespace AppDireccionGeneral.vista
 
         public FormularioDelegacion(Delegacion delegacion): this()
         {
+            delegacionEdicion = delegacion;
             this.lbTitulo.Content = "Modificar delegación";
             cargarDatosDelegacion();
             esNuevo = false;
@@ -157,7 +158,7 @@ namespace AppDireccionGeneral.vista
                 }
                 else
                 {
-
+                    DelegacionDAO.modificarDelegacion(crearDelegacion());
                     MessageBox.Show("Delegacion modificada");
                 }
                 CrudDelegacion crudDelegacion = new CrudDelegacion();
@@ -201,8 +202,8 @@ namespace AppDireccionGeneral.vista
             tbCodigoPostal.Text = delegacionEdicion.CodigoPostal.ToString();
             tbTelefono.Text = delegacionEdicion.Telefono.ToString();
             tbCorreo.Text = delegacionEdicion.Correo;
-            cbMunicipio.SelectedValuePath = delegacionEdicion.NombreMunicipio;
-            cbTipoDelegacion.SelectedValuePath = delegacionEdicion.TipoDelegacion;
+            cbMunicipio.SelectedIndex = delegacionEdicion.IdMunicipio -1;
+            cbTipoDelegacion.SelectedItem = delegacionEdicion.TipoDelegacion;
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)

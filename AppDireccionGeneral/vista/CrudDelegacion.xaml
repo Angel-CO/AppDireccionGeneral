@@ -27,8 +27,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Height="34" Margin="1005,81,0,0" VerticalAlignment="Top" Width="110" FontSize="20" Foreground="White" Background="#FF876E00" />
-        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Height="34" Margin="1158,81,0,0" VerticalAlignment="Top" Width="110" FontSize="20" Foreground="White" Background="#FF871200" />
+        <Button x:Name="btnModificar" IsEnabled="False" Content="Modificar" HorizontalAlignment="Left" Height="34" Margin="1005,81,0,0" VerticalAlignment="Top" Width="110" FontSize="20" Foreground="White" Background="#FF876E00" Click="btnModificar_Click" />
+        <Button x:Name="btnEliminar" IsEnabled="False" Content="Eliminar" HorizontalAlignment="Left" Height="34" Margin="1158,81,0,0" VerticalAlignment="Top" Width="110" FontSize="20" Foreground="White" Background="#FF871200" Click="btnEliminar_Click" />
         <Label Content="Delegaciones existentes:" HorizontalAlignment="Left" Margin="66,81,0,0" VerticalAlignment="Top" Width="412" FontSize="36"/>
     </Grid>
 

@@ -51,5 +51,25 @@ namespace AppDireccionGeneral.vista
         {
 
         }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+            FormularioDelegacion formularioDelegacion = new FormularioDelegacion((Delegacion)lvDelegaciones.SelectedItem);
+            formularioDelegacion.Show();
+            this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            Delegacion delegacion = (Delegacion)lvDelegaciones.SelectedItem;
+            MessageBoxResult resultado = MessageBox.Show("¿Esta seguro de eliminar la delegacion: " +
+            delegacion.Nombre + "?", "Confirmar acción", MessageBoxButton.OKCancel);
+            if (resultado == MessageBoxResult.OK)
+            {
+                DelegacionDAO.eliminarDelegacion(delegacion);
+                cargarDelegaciones();
+                MessageBox.Show("Delegacion eliminada");
+            }
+        }
     }
 }

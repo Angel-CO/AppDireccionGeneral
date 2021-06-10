@@ -102,6 +102,77 @@ namespace AppDireccionGeneral.modelo.dao
             }
         }
 
+        public static void modificarDelegacion(Delegacion delegacion)
+        {
+            SqlConnection conn = null;
+            try
+            {
+                conn = ConexionBD.getConecction();
+                if (conn != null)
+                {
+                    SqlCommand command;
+                    SqlDataReader dataReader;
+                    String query = String.Format("UPDATE SistemaVehicular.dbo.Delegacion " +
+                        "SET nombre = '{0}', calle = '{1}', numero = '{2}', " +
+                        "colonia = '{3}', codigoPostal = '{4}', telefono = '{5}', " +
+                        "correo = '{6}', tipoDelegacion = '{7}', idMunicipio = {8} " +
+                        "WHERE idDelegacion = {9};",
+                        delegacion.Nombre, delegacion.Calle, delegacion.Numero,
+                        delegacion.Colonia, delegacion.CodigoPostal, delegacion.Telefono,
+                        delegacion.Correo, delegacion.TipoDelegacion, delegacion.IdMunicipio,
+                        delegacion.IdDelegacion);
+                    command = new SqlCommand(query, conn);
+                    dataReader = command.ExecuteReader();
+                    dataReader.Close();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("\nExcepción Delegacion modificarDelegacion(Delegacion delegacion):");
+                Console.WriteLine(e.Message);
+                Console.WriteLine("----------------------------------------------------------------\n");
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+        }
 
+        public static void eliminarDelegacion(Delegacion delegacion)
+        {
+            SqlConnection conn = null;
+            try
+            {
+                conn = ConexionBD.getConecction();
+                if (conn != null)
+                {
+                    SqlCommand command;
+                    SqlDataReader dataReader;
+                    String query = String.Format("DELETE FROM SistemaVehicular.dbo.Delegacion " +
+                        "WHERE idDelegacion = {0}", delegacion.IdDelegacion);
+                    command = new SqlCommand(query, conn);
+                    dataReader = command.ExecuteReader();
+                    dataReader.Close();
+                    command.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("\nExcepción DelegacionDAO eliminarDelegacion(Delegacion delegacion):");
+                Console.WriteLine(e.Message);
+                Console.WriteLine("----------------------------------------------------------------\n");
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+        }
     }
 }
