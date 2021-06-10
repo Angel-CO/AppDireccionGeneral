@@ -22,7 +22,7 @@ namespace AppDireccionGeneral.modelo.dao
                 {
                     SqlCommand command;
                     SqlDataReader dataReader;
-                    String query = "SELECT r.idReporte, r.direccionSiniestrio, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
+                    String query = "SELECT r.idReporte, r.direccionSiniestro, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
                         "FROM SistemaVehicular.dbo.Reporte r " +
                         "INNER JOIN SistemaVehicular.dbo.Delegacion d " +
                         "ON r.idDelegacion = d.idDelegacion;";
@@ -72,7 +72,7 @@ namespace AppDireccionGeneral.modelo.dao
                 {
                     SqlCommand command;
                     SqlDataReader dataReader;
-                    String query = String.Format("SELECT r.idReporte, r.direccionSiniestrio, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
+                    String query = String.Format("SELECT r.idReporte, r.direccionSiniestro, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
                         "FROM SistemaVehicular.dbo.Reporte r " +
                         "INNER JOIN SistemaVehicular.dbo.Delegacion d " +
                         "ON r.idDelegacion = d.idDelegacion " +
@@ -127,7 +127,7 @@ namespace AppDireccionGeneral.modelo.dao
                     SqlCommand command;
                     SqlDataReader dataReader;
                     String fechaString = fecha.Year + "-" + fecha.Month + "-" + fecha.Day;
-                    String query = String.Format("SELECT r.idReporte, r.direccionSiniestrio, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
+                    String query = String.Format("SELECT r.idReporte, r.direccionSiniestro, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
                         "FROM SistemaVehicular.dbo.Reporte r " +
                         "INNER JOIN SistemaVehicular.dbo.Delegacion d " +
                         "ON r.idDelegacion = d.idDelegacion " +
@@ -179,7 +179,7 @@ namespace AppDireccionGeneral.modelo.dao
                 {
                     SqlCommand command;
                     SqlDataReader dataReader;
-                    String query = String.Format("SELECT r.idReporte, r.direccionSiniestrio, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
+                    String query = String.Format("SELECT r.idReporte, r.direccionSiniestro, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
                         "FROM SistemaVehicular.dbo.Reporte r " +
                         "INNER JOIN SistemaVehicular.dbo.Delegacion d " +
                         "ON r.idDelegacion = d.idDelegacion " +
@@ -233,7 +233,7 @@ namespace AppDireccionGeneral.modelo.dao
                     SqlCommand command;
                     SqlDataReader dataReader;
                     String fechaString = fecha.Year + "-" + fecha.Month + "-" + fecha.Day;
-                    String query = String.Format("SELECT r.idReporte, r.direccionSiniestrio, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
+                    String query = String.Format("SELECT r.idReporte, r.direccionSiniestro, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
                         "FROM SistemaVehicular.dbo.Reporte r " +
                         "INNER JOIN SistemaVehicular.dbo.Delegacion d " +
                         "ON r.idDelegacion = d.idDelegacion " +
@@ -286,7 +286,7 @@ namespace AppDireccionGeneral.modelo.dao
                     SqlCommand command;
                     SqlDataReader dataReader;
                     String fechaString = fecha.Year + "-" + fecha.Month + "-" + fecha.Day;
-                    String query = String.Format("SELECT r.idReporte, r.direccionSiniestrio, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
+                    String query = String.Format("SELECT r.idReporte, r.direccionSiniestro, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
                         "FROM SistemaVehicular.dbo.Reporte r " +
                         "INNER JOIN SistemaVehicular.dbo.Delegacion d " +
                         "ON r.idDelegacion = d.idDelegacion " +
@@ -339,7 +339,7 @@ namespace AppDireccionGeneral.modelo.dao
                     SqlCommand command;
                     SqlDataReader dataReader;
                     String fechaString = fecha.Year + "-" + fecha.Month + "-" + fecha.Day;
-                    String query = String.Format("SELECT r.idReporte, r.direccionSiniestrio, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
+                    String query = String.Format("SELECT r.idReporte, r.direccionSiniestro, r.estatus, r.fechaHora, r.idDelegacion, d.nombre " +
                         "FROM SistemaVehicular.dbo.Reporte r " +
                         "INNER JOIN SistemaVehicular.dbo.Delegacion d " +
                         "ON r.idDelegacion = d.idDelegacion " +
