@@ -11,8 +11,6 @@ C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGener
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\AppDireccionGeneral.csproj.CoreCompileInputs.cache
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\AppDireccionGeneral.exe
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\AppDireccionGeneral.pdb
-C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\MenuPrincipal.g.cs
-C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\MenuPrincipal.baml
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\vista\ListaReportes.g.cs
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\vista\ListaReportes.baml
 C:\Users\A515-54-798T\Desktop\Proyecto TCS\AppDireccionGeneral\AppDireccionGeneral\obj\Debug\vista\DictaminarReporte.g.cs

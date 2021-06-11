@@ -51,12 +51,12 @@ namespace AppDireccionGeneral.vista
             {
                 if (esNuevo)
                 {
-                    UsuarioDAO.agregarUsuario(usuarioEdicion);
+                    UsuarioDAO.agregarUsuario(crearUsuario());
                     MessageBox.Show("Usuario registrado");
                 }
                 else
                 {
-                    UsuarioDAO.modificarUsuario(usuarioEdicion);
+                    UsuarioDAO.modificarUsuario(crearUsuario());
                     MessageBox.Show("Usuario modificado");
                 }
                 CrudUsuario crudUsuario = new CrudUsuario();
@@ -86,26 +86,75 @@ namespace AppDireccionGeneral.vista
             cbDelegacion.ItemsSource = delegaciones;
         }
 
+        private Usuario crearUsuario()
+        {
+            Usuario usuario = new Usuario();
+
+            if (!esNuevo)
+            {
+                usuario.IdUsuario = usuarioEdicion.IdUsuario;
+            }
+            usuario.NombreUsuario = tbUsuario.Text;
+            usuario.Contrasenia = tbContrasenia.Text;
+            usuario.Nombre = tbNombre.Text;
+            usuario.ApellidoPaterno = tbApellidoPaterno.Text;
+            usuario.ApellidoMaterno = tbApellidoMaterno.Text;
+            usuario.Cargo = (String)cbCargo.SelectedItem;
+            usuario.IdDelegacion = ((Delegacion)cbDelegacion.SelectedItem).IdDelegacion;
+
+            return usuario;
+        }
 
         private bool validarCampos()
         {
-            return (tbUsuario.Text == "" ||
-                tbContrasenia.Text == "" ||
-                tbNombre.Text == "" ||
-                tbApellidoPaterno.Text == "" ||
-                tbApellidoMaterno.Text == "" ||
-                cbCargo.SelectedItem == null ||
-                cbDelegacion.SelectedItem == null) ? false : true;
+            bool datoValidos = true;
+            if(tbUsuario.Text == "")
+            {
+                datoValidos = false;
+            }
+
+            if (tbContrasenia.Text == "")
+            {
+                datoValidos = false;
+            }
+
+            if (tbNombre.Text == "")
+            {
+                datoValidos = false;
+            }
+
+            if (tbApellidoPaterno.Text == "")
+            {
+                datoValidos = false;
+            }
+
+            if (tbApellidoMaterno.Text == "")
+            {
+                datoValidos = false;
+            }
+
+            if (cbCargo.SelectedIndex < 0)
+            {
+                datoValidos = false;
+            }
+
+            if (cbDelegacion.SelectedIndex < 0)
+            {
+                datoValidos = false;
+            }
+
+            return datoValidos;
         }
 
         private void llenarCampos()
         {
             tbUsuario.Text = usuarioEdicion.NombreUsuario;
             tbNombre.Text = usuarioEdicion.Nombre;
+            tbContrasenia.Text = usuarioEdicion.Contrasenia;
             tbApellidoPaterno.Text = usuarioEdicion.ApellidoPaterno;
             tbApellidoMaterno.Text = usuarioEdicion.ApellidoMaterno;
             cbCargo.SelectedItem = usuarioEdicion.Cargo;
-            cbDelegacion.SelectedItem = usuarioEdicion.Delegacion;
+            cbDelegacion.SelectedIndex = usuarioEdicion.IdDelegacion - 1;
         }
 
     }

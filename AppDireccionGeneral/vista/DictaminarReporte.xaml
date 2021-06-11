@@ -123,9 +123,12 @@
                    HorizontalAlignment="Left"
                    Margin="10,0,0,0" Grid.ColumnSpan="2"/>
             <TextBox x:Name="tbDescripcion"
+                     TextWrapping="Wrap"
                      Grid.Row="1"
                      BorderThickness="3"
-                     Margin="15,35,15,15" Grid.ColumnSpan="2"/>
+                     MaxLength="250"
+                     Margin="15,35,15,15"
+                     Grid.ColumnSpan="2"/>
         </Grid>
 
         <Button x:Name="btnDictaminar"

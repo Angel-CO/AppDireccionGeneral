@@ -74,10 +74,10 @@ namespace AppDireccionGeneral.modelo.dao
                     SqlCommand command;
                     SqlDataReader dataReader;
                     String query = String.Format("INSERT INTO SistemaVehicular.dbo.Usuario " +
-                        "(nombreUsuario, contrasenia, apellidoPaterno, apellidoMaterno, cargo, idDelegacion)" +
-                        "VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');",
+                        "(nombreUsuario, contrasenia, apellidoPaterno, apellidoMaterno, cargo, idDelegacion, nombre) " +
+                        "VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}');",
                         usuario.NombreUsuario, usuario.Contrasenia, usuario.ApellidoPaterno,
-                        usuario.ApellidoMaterno, usuario.Cargo, usuario.IdDelegacion);
+                        usuario.ApellidoMaterno, usuario.Cargo, usuario.IdDelegacion, usuario.Nombre);
                     command = new SqlCommand(query, conn);
                     dataReader = command.ExecuteReader();
                     dataReader.Close();
@@ -110,11 +110,14 @@ namespace AppDireccionGeneral.modelo.dao
                     SqlCommand command;
                     SqlDataReader dataReader;
                     String query = String.Format("UPDATE SistemaVehicular.dbo.Usuario " +
-                        "SET nombreUsuario = '{0}', contrasenia = '{1}', apellidoMaterno = '{2}', " +
-                        "fechaNacimiento = '{3}', numLicencia = '{4}', telefono = '{5}'" +
-                        "WHERE idConductor = {6}",
-                        usuario.NombreUsuario, usuario.Contrasenia, usuario.ApellidoPaterno,
-                        usuario.ApellidoMaterno, usuario.Cargo, usuario.IdDelegacion, usuario.IdUsuario);
+                        "SET nombreUsuario = '{0}', contrasenia = '{1}', nombre = '{2}', " +
+                        "apellidoPaterno = '{3}', apellidoMaterno = '{4}', cargo = '{5}', " +
+                        "idDelegacion = {6} " +
+                        "WHERE idUsuario = {7};",
+                        usuario.NombreUsuario, usuario.Contrasenia, usuario.Nombre,
+                        usuario.ApellidoPaterno, usuario.ApellidoMaterno, usuario.Cargo,
+                        usuario.IdDelegacion, usuario.IdUsuario);
+
                     command = new SqlCommand(query, conn);
                     dataReader = command.ExecuteReader();
                     dataReader.Close();

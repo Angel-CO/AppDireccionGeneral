@@ -48,7 +48,7 @@ namespace AppDireccionGeneral.vista
             }
             else
             {
-                MessageBox.Show("Datos invalidoss");
+                MessageBox.Show("Datos inválidos");
             }
         }
 
