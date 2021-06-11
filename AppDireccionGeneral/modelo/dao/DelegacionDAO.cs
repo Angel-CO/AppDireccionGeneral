@@ -6,7 +6,7 @@ using AppDireccionGeneral.modelo.poco;
 
 namespace AppDireccionGeneral.modelo.dao
 {
-    class DelegacionDAO
+    public class DelegacionDAO
     {
         public static List<Delegacion> getAllDelegaciones()
         {
@@ -43,7 +43,7 @@ namespace AppDireccionGeneral.modelo.dao
 
                         delegaciones.Add(delegacion);
                     }
-                    Console.WriteLine(query);
+
                     dataReader.Close();
                     command.Dispose();
                 }

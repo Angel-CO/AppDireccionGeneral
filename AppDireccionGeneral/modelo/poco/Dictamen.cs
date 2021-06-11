@@ -13,13 +13,13 @@ namespace AppDireccionGeneral.modelo.poco
         private DateTime fechaHora;
         private int idReporte;
         private int idUsuario;
-        private int nombrePerito;
+        private String nombrePerito;
 
         public int Folio { get => folio; set => folio = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public DateTime FechaHora { get => fechaHora; set => fechaHora = value; }
         public int IdReporte { get => idReporte; set => idReporte = value; }
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
-        public int NombrePerito { get => nombrePerito; set => nombrePerito = value; }
+        public string NombrePerito { get => nombrePerito; set => nombrePerito = value; }
     }
 }

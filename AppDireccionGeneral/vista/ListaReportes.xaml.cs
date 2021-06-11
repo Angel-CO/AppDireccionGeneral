@@ -138,5 +138,13 @@ namespace AppDireccionGeneral.vista
             dictaminarReporte.Show();
             this.Close();
         }
+
+        private void btnVerDetalles_Click(object sender, RoutedEventArgs e)
+        {
+            DetallesReporte detallesReporte = new DetallesReporte((Reporte)lvReportes.SelectedItem);
+            MessageBox.Show(((Reporte)lvReportes.SelectedItem).IdReporte.ToString());
+            detallesReporte.Show();
+            this.Close();
+        }
     }
 }
