@@ -1,5 +1,4 @@
-﻿using AppDireccionGeneral.vista;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace AppDireccionGeneral
+namespace AppDireccionGeneral.vista
 {
     /// <summary>
     /// Interaction logic for MenuPrincipal.xaml
@@ -24,31 +23,26 @@ namespace AppDireccionGeneral
         {
             InitializeComponent();
         }
-        private void Btn_Usuario_Click(object sender, RoutedEventArgs e)
+
+        private void btnUsuarios_Click(object sender, RoutedEventArgs e)
         {
             CrudUsuario crudUsuario = new CrudUsuario();
             crudUsuario.Show();
             this.Close();
         }
 
-        private void Btn_DelegacionMunicipal_Click(object sender, RoutedEventArgs e)
+        private void btnDelegaciones_Click(object sender, RoutedEventArgs e)
         {
             CrudDelegacion crudDelegacion = new CrudDelegacion();
             crudDelegacion.Show();
             this.Close();
         }
 
-        private void Btn_Chat_Click(object sender, RoutedEventArgs e)
+        private void btnReportes_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-
-        }
-
-        private void Btn_Reportes_Click(object sender, RoutedEventArgs e) {
             ListaReportes listaReportes = new ListaReportes();
             listaReportes.Show();
             this.Close();
-
         }
     }
 }

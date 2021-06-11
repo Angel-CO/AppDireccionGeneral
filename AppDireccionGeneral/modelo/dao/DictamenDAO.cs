@@ -67,6 +67,8 @@ namespace AppDireccionGeneral.modelo.dao
                          "WHERE d.idReporte = {0}; ", reporte.IdReporte);
 
                     command = new SqlCommand(query, conn);
+
+                    Console.WriteLine(query);
                     dataReader = command.ExecuteReader();
 
                     while (dataReader.Read())
@@ -82,6 +84,7 @@ namespace AppDireccionGeneral.modelo.dao
                         String apellidoMaterno = (!dataReader.IsDBNull(7)) ? dataReader.GetString(7) : "";
 
                         dictamen.NombrePerito = nombre + " " + apellidoPaterno + " " + apellidoMaterno;
+                        
                     }
 
                     dataReader.Close();

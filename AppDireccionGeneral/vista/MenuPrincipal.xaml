@@ -1,0 +1,22 @@
+﻿<Window x:Class="AppDireccionGeneral.vista.MenuPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppDireccionGeneral.vista"
+        mc:Ignorable="d"
+        Title="MenuPrincipal" Height="450" Width="800">
+    <Grid x:Name="Btn_Usuario" RenderTransformOrigin="0.618,0.559">
+        <Rectangle Fill="#FF424242" HorizontalAlignment="Left" Height="62" Stroke="White" VerticalAlignment="Top" Width="792"/>
+        <Label Content="Bienvenido" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="299,0,0,0" Height="47" Width="171" FontSize="30" Foreground="White"/>
+        <Image HorizontalAlignment="Left" Height="87" Margin="649,87,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label Content="Seleccione la opción que desee:" HorizontalAlignment="Left" Margin="180,87,0,0" VerticalAlignment="Top" FontSize="30" RenderTransformOrigin="0.133,2.297"/>
+        <Rectangle Fill="#FF787878" HorizontalAlignment="Left" Height="419" Stroke="White" VerticalAlignment="Top" Width="48"/>
+        <Button x:Name="btnUsuarios" Content="Usuarios" HorizontalAlignment="Left" Margin="225,161,0,0" VerticalAlignment="Top" Width="310" Height="53" FontSize="30" BorderThickness="5" Click="btnUsuarios_Click"/>
+        <Button x:Name="btnDelegaciones" Content="Delegaciones" HorizontalAlignment="Left" Margin="225,242,0,0" VerticalAlignment="Top" Width="310" RenderTransformOrigin="-1.092,4.251" Height="63" FontSize="30" BorderThickness="5" Click="btnDelegaciones_Click"/>
+        <Image Source="/images/SSPEV.png" HorizontalAlignment="Left" Height="75" Margin="649,-13,-53,0" VerticalAlignment="Top" Width="196" RenderTransformOrigin="0.732,0.547"/>
+        <Button x:Name="btnReportes" Content="Reportes" HorizontalAlignment="Left" Margin="225,336,0,0" VerticalAlignment="Top" Width="310" Height="53" FontSize="30" BorderThickness="5" Click="btnReportes_Click"/>
+        
+    </Grid>
+
+</Window>

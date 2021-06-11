@@ -58,8 +58,8 @@ namespace AppDireccionGeneral.vista
 
         private void Btn_Regresar_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Show();
             this.Close();
         }
 

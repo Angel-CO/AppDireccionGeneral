@@ -23,8 +23,7 @@ namespace AppDireccionGeneral.vista
     {
         private List<Reporte> reportes = new List<Reporte>();
         private List<Delegacion> delegaciones = new List<Delegacion>();
-        //List<>
-
+        
         public ListaReportes()
         {
             InitializeComponent();
@@ -142,8 +141,14 @@ namespace AppDireccionGeneral.vista
         private void btnVerDetalles_Click(object sender, RoutedEventArgs e)
         {
             DetallesReporte detallesReporte = new DetallesReporte((Reporte)lvReportes.SelectedItem);
-            MessageBox.Show(((Reporte)lvReportes.SelectedItem).IdReporte.ToString());
             detallesReporte.Show();
+            this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Show();
             this.Close();
         }
     }

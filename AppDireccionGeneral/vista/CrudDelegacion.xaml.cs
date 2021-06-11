@@ -49,7 +49,9 @@ namespace AppDireccionGeneral.vista
 
         private void btnRegresar_Click(object sender, RoutedEventArgs e)
         {
-
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.Show();
+            this.Close();
         }
 
         private void btnModificar_Click(object sender, RoutedEventArgs e)

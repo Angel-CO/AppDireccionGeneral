@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:AppDireccionGeneral.vista"
         mc:Ignorable="d"
         Title="DetallesReporte" Height="1500" Width="1000">
+    
     <Grid>
         <ScrollViewer>
             <Grid>
@@ -13,8 +14,9 @@
                     <RowDefinition Height="70"/>
                     <RowDefinition Height="60"/>
                     <RowDefinition Height="100"/>
-                    <RowDefinition Height="500"/>
-                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid Background="#353535" Grid.Row="0" >
@@ -37,9 +39,9 @@
                     <Image Source="/images/logoSSP.png"
                    HorizontalAlignment="Right" />
                 </Grid>
-                
+
                 <Grid Grid.Row="1">
-                    
+
                     <Label Content="Dictamen"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Top"
@@ -55,7 +57,7 @@
                         <TextBox x:Name="tbFolio"
                          Width="50"
                          Margin="0,0,10,0"/>
-                        
+
                         <Label Content="Fecha:"
                         Margin="0,0,3,0"/>
                         <TextBox x:Name="tbFecha"
@@ -83,96 +85,85 @@
                 </Grid>
 
                 <Grid Grid.Row="3">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
 
-                    <Label Content="Seleccione a los condcutires." Grid.Row="0" Grid.Column="0"/>
+                    <Label Content="Reporte"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Top"
+                           FontSize="18"/>
+
+                    <StackPanel
+                    Orientation="Horizontal"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center"
+                    Margin="0,20,0,0">
+                        <Label Content="Estatus:"
+                       Margin="0,0,3,0"/>
+                        <TextBox x:Name="tbEstatus"
+                         Width="90"
+                         Margin="0,0,10,0"/>
+
+                        <Label Content="Fecha:"
+                        Margin="0,0,3,0"/>
+                        <DatePicker x:Name="dpFecha"/>
+
+                        <Label Content="Delegación:"
+                        Margin="0,0,3,0"/>
+                        <TextBox x:Name="tbDelegacion"
+                         Width="150"
+                         Margin="0,0,20,0"/>
+
+                        <Label Content="Dirección:"
+                        Margin="0,0,3,0"/>
+                        <TextBox x:Name="tbDireccion"
+                         Width="300"
+                         Margin="0,0,0,0"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <Label Content="Conductores." Grid.Row="0" Grid.Column="0"/>
                     <ListView x:Name="lvCondcutores" Grid.Row="0" Grid.Column="0" Margin="10,30,10,10" >
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Nombre" Width="100" DisplayMemberBinding="{Binding Nombre}"/>
-                                <GridViewColumn Header="Apellido paterno" Width="100" DisplayMemberBinding="{Binding ApellidoPaterno}"/>
-                                <GridViewColumn Header="Apellido paterno" Width="100" DisplayMemberBinding="{Binding ApellidoMaterno}"/>
+                                <GridViewColumn Header="Apellido paterno" Width="150" DisplayMemberBinding="{Binding ApellidoPaterno}"/>
+                                <GridViewColumn Header="Apellido paterno" Width="150" DisplayMemberBinding="{Binding ApellidoMaterno}"/>
                                 <GridViewColumn Header="Fecha de nacimiento" Width="120" DisplayMemberBinding="{Binding FechaNacimiento}"/>
                                 <GridViewColumn Header="No. licencia" Width="100" DisplayMemberBinding="{Binding NumLicencia}"/>
+                                <GridViewColumn Header="Teléfono" Width="100" DisplayMemberBinding="{Binding Telefono}"/>
                             </GridView>
-                        </ListView.View>
-                    </ListView>
-
-                    <Label x:Name="lbConductoresSeleccionados" Content="Conductores seleccionados." Grid.Row="0" Grid.Column="1"/>
-                    <ListView x:Name="lvCondcutoresSeleccionados" Grid.Row="0" Grid.Column="2" Margin="10,30,10,10" >
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Nombre" Width="100" DisplayMemberBinding="{Binding Nombre}"/>
-                                <GridViewColumn Header="Apellido paterno" Width="100" DisplayMemberBinding="{Binding ApellidoPaterno}"/>
-                                <GridViewColumn Header="Apellido paterno" Width="100" DisplayMemberBinding="{Binding ApellidoMaterno}"/>
-                                <GridViewColumn Header="Fecha de nacimiento" Width="120" DisplayMemberBinding="{Binding FechaNacimiento}"/>
-                                <GridViewColumn Header="No. licencia" Width="100" DisplayMemberBinding="{Binding NumLicencia}"/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
-
-
-                    <Label Content="Seleccione a los vehiculos." Grid.Row="1" Grid.Column="0"/>
-                    <ListView x:Name="lvVehiculos" Grid.Row="1" Grid.Column="0" Margin="10,30,10,10">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Marca" Width="100"
-                                    DisplayMemberBinding="{Binding Marca}"/>
-                                <GridViewColumn Header="Modelo" Width="110"
-                                    DisplayMemberBinding="{Binding Modelo}"/>
-                                <GridViewColumn Header="Año" Width="50"
-                                    DisplayMemberBinding="{Binding Anio}"/>
-                                <GridViewColumn Header="Color" Width="100"
-                                    DisplayMemberBinding="{Binding Color}"/>
-                                <GridViewColumn Header="Placas" Width="60"
-                                    DisplayMemberBinding="{Binding NumPlaca}"/>
-                                <GridViewColumn Header="Aseguradora" Width="150"
-                                    DisplayMemberBinding="{Binding NombreAseguradora}"/>
-                                <GridViewColumn Header="No. Poliza" Width="150"
-                                    DisplayMemberBinding="{Binding NumPolizaSeguro}"/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
-
-
-                    <Label x:Name="lbVehiculosSeleccionados" Content="Vehículos seleccionados." Grid.Row="1" Grid.Column="1"/>
-                    <ListView x:Name="lvVehiculosSeleccionados" Grid.Row="1" Grid.Column="1" Margin="10,30,10,10">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Marca" Width="100"
-                                    DisplayMemberBinding="{Binding Marca}"/>
-                                <GridViewColumn Header="Modelo" Width="110"
-                                    DisplayMemberBinding="{Binding Modelo}"/>
-                                <GridViewColumn Header="Año" Width="50"
-                                    DisplayMemberBinding="{Binding Anio}"/>
-                                <GridViewColumn Header="Color" Width="100"
-                                    DisplayMemberBinding="{Binding Color}"/>
-                                <GridViewColumn Header="Placas" Width="60"
-                                    DisplayMemberBinding="{Binding NumPlaca}"/>
-                                <GridViewColumn Header="Aseguradora" Width="150"
-                                    DisplayMemberBinding="{Binding NombreAseguradora}"/>
-                                <GridViewColumn Header="No. Poliza" Width="150"
-                                    DisplayMemberBinding="{Binding NumPolizaSeguro}"/>
-                            </GridView>
-
                         </ListView.View>
                     </ListView>
                 </Grid>
 
-                <Button x:Name="btnAgregarImagen"
-                Content="Agregar imagen"
-                Grid.Row="3"
-                Height="20"
-                Width="100"/>
+                <Grid Grid.Row="5">
+                    <Label Content="Vehiculos" Margin="10,0,0,0"/>
+                    <ListView x:Name="lvVehiculos" Grid.Row="2" Margin="10,30,10,10" Grid.Column="0">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Marca" Width="100"
+                                    DisplayMemberBinding="{Binding Marca}"/>
+                                <GridViewColumn Header="Modelo" Width="150"
+                                    DisplayMemberBinding="{Binding Modelo}"/>
+                                <GridViewColumn Header="Año" Width="50"
+                                    DisplayMemberBinding="{Binding Anio}"/>
+                                <GridViewColumn Header="Color" Width="120"
+                                    DisplayMemberBinding="{Binding Color}"/>
+                                <GridViewColumn Header="Placas" Width="120"
+                                    DisplayMemberBinding="{Binding NumPlaca}"/>
+                                <GridViewColumn Header="Aseguradora" Width="150"
+                                    DisplayMemberBinding="{Binding NombreAseguradora}"/>
+                                <GridViewColumn Header="No. Poliza" Width="150"
+                                    DisplayMemberBinding="{Binding NumPolizaSeguro}"/>
+                                <GridViewColumn Header="Conductor" Width="200"
+                                    DisplayMemberBinding="{Binding NombreConductor}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
 
-                <Grid Grid.Row="4">
+                </Grid>
+
+                <Grid Grid.Row="6">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -216,10 +207,8 @@
                            Grid.Column="1" Grid.Row="3"
                            Margin="10"/>
                 </Grid>
-
             </Grid>
-
         </ScrollViewer>
-
     </Grid>
+
 </Window>
